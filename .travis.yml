@@ -38,7 +38,7 @@ jobs:
     # https://docs.travis-ci.com/user/build-stages/deploy-github-releases/
     # publish canary package if on master
     - stage: Release canary
-      if: (branch = master) OR (tag IS present) OR (type = pull_request)
+      if: (type = pull_request)
       name: "Release canary"
       script:
         - echo "Run standard-version"
