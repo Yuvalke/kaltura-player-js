@@ -21,7 +21,7 @@ script:
   - yarn install
 
 stages:
-  - Tests
+#  - Tests
   - Release canary
   - Release
 
@@ -57,6 +57,11 @@ jobs:
         - echo branch
         - echo ${branch}
         - echo "${branch}"
+        - echo "${tag}"
+        - echo "${TRAVIS_BRANCH}"
+        - echo "$TRAVIS_BRANCH"
+        - echo "${TRAVIS_TAG}"
+        - echo "$TRAVIS_TAG"
 #        - yarn run build:ovp && yarn run build:ott && npm run commit:dist
 #        - ./scripts/after_deploy.sh "$branch" $JENKINS_CANARY_TOKEN
     # Required tests
